@@ -1,0 +1,21 @@
+
+<div class="p-5">
+  <div class="container shadow p-5">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Codigo</th>
+          <th scope="col">Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let banco of bancos">
+          <td *ngIf="banco.code != null">{{ banco.code }}</td>
+          <td *ngIf="banco.code != null"> {{ banco.name }} </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
