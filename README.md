@@ -1,4 +1,4 @@
-# Teste Tecnico Abas
+# Teste Desenvolvedor Abas
 
 # Getting Started
 First, install the dependencies on Angular project folder:
