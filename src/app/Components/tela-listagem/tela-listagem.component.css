@@ -4,3 +4,9 @@ a{
   color: black;
 
 }
+
+tr:hover{
+  background-color: rgb(191, 194, 194);
+  font-weight: bold;
+
+}
