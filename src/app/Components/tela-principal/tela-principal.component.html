@@ -1,0 +1,44 @@
+
+<div class="p-5">
+  <div class="container shadow p-5">
+
+    <div class="row">
+
+      <div class="col-4">
+        <a class="btn btn-outline-dark btnSubmit" href="/bancos">Cadastrar Nova Conta</a>
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+
+<div *ngIf="contas.length > 0">
+  <h4>Contas Bancárias</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Conta</th>
+        <th scope="col">Agência</th>
+        <th scope="col">Codigo do Banco</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let conta of contas">
+          <td *ngIf="conta.code != null"> {{ conta.conta }}</td>
+          <td *ngIf="conta.code != null"> {{ conta.agencia }}</td>
+          <td *ngIf="conta.code != null">{{ conta.code }}</td>
+        </tr>
+
+
+    </tbody>
+  </table>
+</div>
+<div *ngIf="contas.length === 0"><h4>Sem Contas Cadastradas, Cadastre um Nova Conta!</h4></div>
+
+
+
+</div>
+</div>

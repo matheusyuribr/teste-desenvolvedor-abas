@@ -1,4 +1,4 @@
-import { Banco } from './Components/tela-listagem/banco';
+import { Banco } from './banco';
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
 
@@ -13,6 +13,10 @@ export class BancosService {
 
   listar(){
     return this.http.get<Banco[]>(this.API)
+  }
+
+  pesquisar(input: string){
+    return this.http.get<Banco>(this.API+"/"+input)
   }
 
 }

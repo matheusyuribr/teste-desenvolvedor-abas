@@ -1,0 +1,61 @@
+
+
+<div class="p-5">
+  <div class="container shadow p-5">
+    <div class="p-5 border border-light rounded">
+      <h4>Banco</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ banco.code }}</td>
+            <td> {{ banco.name }} </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      <br>
+      <h4>Cadastro de Conta</h4>
+
+      <br>
+
+      <form [formGroup]="formulario">
+
+        <div class="container">
+          <div class="row">
+
+            <div class="col-6">
+              <div class="form-group">
+                <input type="text" class="form-control form-control-sm" placeholder="Agencia" formControlName="agencia">
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <input type="text" class="form-control form-control-sm" placeholder="Conta" formControlName="conta">
+              </div>
+            </div>
+
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-10">
+
+            </div>
+            <div class="col-2">
+              <a type="submit" href="/" (click)="cadastrarConta()" class="btn btn-outline-dark btn-sm">Cadastrar</a>
+            </div>
+
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,16 @@
 
 <div class="p-5">
   <div class="container shadow p-5">
+
+    <h3>Bancos</h3>
+
+    <div class="input-group mb-3">
+      <input id="code" name="code" [(ngModel)]="code" type="text" class="form-control" placeholder="Digite o código do banco" aria-label="Digite o código do banco" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <a class="btn btn-outline-dark btnSubmit" href="/cadastro" type="submit" (click)="pesquisarBanco(code)" >Pesquisar</a>
+      </div>
+    </div>
+
     <table class="table table-striped">
       <thead>
         <tr>
@@ -9,10 +19,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let banco of bancos">
-          <td *ngIf="banco.code != null">{{ banco.code }}</td>
-          <td *ngIf="banco.code != null"> {{ banco.name }} </td>
-        </tr>
+
+          <tr *ngFor="let banco of bancos">
+            <td *ngIf="banco.code != null">{{ banco.code }}</td>
+            <td *ngIf="banco.code != null"> {{ banco.name }}</td>
+            <td *ngIf="banco.code != null"><a class="btn btn-outline-dark btnSubmit" href="/cadastro" type="submit"(click)="pesquisarBanco(banco.code)" >Cadastro</a></td>
+          </tr>
+
+
       </tbody>
     </table>
 
