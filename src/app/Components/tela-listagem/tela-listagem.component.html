@@ -20,10 +20,10 @@
       </thead>
       <tbody>
 
-          <tr *ngFor="let banco of bancos">
-            <td *ngIf="banco.code != null">{{ banco.code }}</td>
-            <td *ngIf="banco.code != null"> {{ banco.name }}</td>
-            <td *ngIf="banco.code != null"><a class="btn btn-outline-dark btnSubmit" href="/cadastro" type="submit"(click)="pesquisarBanco(banco.code)" >Cadastro</a></td>
+          <tr *ngFor="let banco of bancos" (click)="pesquisarBanco(banco.code)" ng-click>
+            <td *ngIf="banco.code != null"><a href="/cadastro">{{ banco.code }}</a></td>
+            <td *ngIf="banco.code != null"><a href="/cadastro">{{ banco.name }}</a></td>
+
           </tr>
 
 
